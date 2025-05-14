@@ -4,16 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My CV</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <h1>Taras Kydon</h1>
       <img src="/photo/IMG_9953.jpg" alt="MyPhoto" width="150" />
-      <p>Phone: <a href="tel:+380934705374">+38 (093) 470-53-74</a></p>
-      <p>
+      <p class="header_p">
+        Phone: <a href="tel:+380934705374">+38 (093) 470-53-74</a>
+      </p>
+      <p class="header_p">
         Email: <a href="mailto:tarikppz12@gmail.com">tarikppz12@gmail.com</a>
       </p>
-      <p>City: Lviv</p>
+      <p class="header_p">City: Lviv</p>
+      <p class="header_p">
+        <label>
+          <input type="checkbox" id="theme-toggle" />
+          Нічний режим
+        </label>
+      </p>
     </header>
 
     <main>
@@ -32,8 +41,9 @@
           <li>HTML (basic)</li>
           <li>CSS (basic)</li>
           <li>Python (basic)</li>
-          <li>Linux OS (basic)</li>
+          <li>Linux OS</li>
           <li>Git (basic)</li>
+          <li>PowerShell (basic)</li>
         </ul>
       </section>
 
@@ -54,6 +64,38 @@
           improving skills in the field of cybersecurity.
         </p>
       </section>
+
+      <section>
+        <h2>Comments from Previous Employers</h2>
+        <ul id="comments-list"></ul>
+      </section>
     </main>
+
+    <footer id="system-info">
+      <h2>Browser & OS Info</h2>
+      <ul id="info-list"></ul>
+    </footer>
+
+    <div id="feedback-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Зворотній зв'язок</h2>
+        <form action="https://formspree.io/f/xldbarjv" method="POST">
+          <label>Ім’я:<br /><input type="text" name="name" required /></label
+          ><br />
+          <label>Email:<br /><input type="email" name="email" required /></label
+          ><br />
+          <label>Телефон:<br /><input type="tel" name="phone" required /></label
+          ><br />
+          <label
+            >Повідомлення:<br />
+            <textarea name="message" rows="4" required></textarea></label
+          ><br />
+          <button type="submit">Відправити</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
